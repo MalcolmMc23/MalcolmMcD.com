@@ -3,7 +3,7 @@
 /* CSS Variables for Color Palette and Typography */
 :root {
     /* Color Palette */
-    --primary-color: #4a4a4a;       /* Header and Nav background */
+    --primary-color: #ffffff;       /* Header and Nav background changed to white */
     --accent-color: #ff6b6b;        /* Buttons and highlights */
     --background-color: #f9f9f9;    /* Page background */
     --text-color: #333333;          /* Main text */
@@ -24,55 +24,66 @@ body {
     color: var(--text-color);
 }
 
+/* Header Section */
 header {
-    background: var(--primary-color);
-    color: #ffffff;
-    padding: 20px 10px; /* Reduced padding */
-    text-align: center;
+    background: var(--primary-color); /* Changed from gray to white */
+    color: var(--text-color); /* Ensures text is readable on white background */
+    padding: 20px 10px; /* Maintained padding for spacing */
     font-family: var(--font-secondary);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Adds subtle shadow for depth */
 }
 
-header h1 {
-    margin-bottom: 5px; /* Reduced margin */
-    font-size: 2em;      /* Reduced font size */
-    font-weight: 300;
-}
-
-header p {
-    font-size: 1em;      /* Adjusted profession/location text size */
-    margin: 0;            /* Removed default margins */
-}
-
-/* Navigation Bar Styles */
-nav {
-    background: var(--primary-color);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-nav ul {
-    list-style: none;
+/* Header Content Container */
+.header-content {
     display: flex;
-    justify-content: center;
-    padding: 10px 0;
+    align-items: center;
+    justify-content: space-between; /* Distributes space evenly */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 10px;
+}
+
+/* Left Section (Profile Image) */
+.left-section {
+    width: 150px; /* Fixed width to match image size */
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Center Section (Header Text) */
+.center-section {
+    flex-grow: 1; /* Allows the center section to take up remaining space */
+    text-align: center; /* Centers the text horizontally */
+}
+
+.header-text h1 {
+    font-size: 2.5em;
     margin: 0;
+    color: var(--text-color);
 }
 
-nav ul li {
-    margin: 0 15px;
+.header-text p {
+    font-size: 1.2em;
+    margin: 5px 0 0 0;
+    color: var(--secondary-text-color);
 }
 
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: var(--accent-color);
+/* Right Section (Empty for Balancing) */
+.right-section {
+    width: 150px; /* Matches left-section to balance the layout */
 }
 
 /* Main Sections */
@@ -87,7 +98,7 @@ nav ul li a:hover {
     padding-bottom: 10px;
     font-size: 2em;
     font-weight: 300;
-    color: var(--primary-color);
+    color: var(--text-color); /* Changed from primary color to maintain consistency */
 }
 
 #project-list, #experience-list {
@@ -115,7 +126,7 @@ nav ul li a:hover {
     font-size: 1.4em;
     margin-bottom: 10px;
     font-weight: bold;
-    color: var(--primary-color);
+    color: var(--text-color); /* Changed from primary color to maintain consistency */
 }
 
 #project-list li p, #experience-list li p {
@@ -142,26 +153,29 @@ html {
 
 /* Responsive Design */
 @media (max-width: 600px) {
-    header {
-        padding: 15px 5px;
+    .header-content {
+        flex-direction: column; /* Stacks sections vertically on smaller screens */
+    }
+    
+    .left-section, .right-section {
+        width: auto; /* Allows flexibility */
+        margin-bottom: 15px; /* Space between image and text */
+    }
+    
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .header-text h1 {
+        font-size: 2em;
+    }
+    
+    .header-text p {
+        font-size: 1em;
     }
 
-    header h1 {
-        font-size: 1.5em;
-    }
-
-    header p {
-        font-size: 0.9em;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
+    
     /* Optional: Adjust main content padding or margins if needed */
     main {
         padding-bottom: 20px; /* Increased padding if footer was previously removed */
