@@ -3,11 +3,11 @@
 /* CSS Variables for Color Palette and Typography */
 :root {
     /* Color Palette */
-    --primary-color: #ffffff;       /* Header and Nav background changed to white */
-    --accent-color: #ff6b6b;        /* Buttons and highlights */
+    --primary-color: #ffffff;       /* Header and Nav background */
+    --accent-color: #000000;        /* Buttons and highlights */
     --background-color: #f9f9f9;    /* Page background */
-    --text-color: #333333;          /* Main text */
-    --secondary-text-color: #555555;/* Secondary text */
+    --text-color: #000000;          /* Main text */
+    --secondary-text-color: #333333;/* Secondary text (darker gray for contrast) */
     --modal-background: #ffffff;    /* Modal background */
     
     /* Typography */
@@ -16,6 +16,10 @@
 }
 
 /* Global Styles */
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: var(--font-primary);
@@ -26,158 +30,199 @@ body {
 
 /* Header Section */
 header {
-    background: var(--primary-color); /* Changed from gray to white */
-    color: var(--text-color); /* Ensures text is readable on white background */
-    padding: 20px 10px; /* Maintained padding for spacing */
+    background: var(--primary-color);
+    color: var(--text-color);
+    padding: 20px 10px;
     font-family: var(--font-secondary);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Adds subtle shadow for depth */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* Header Content Container */
 .header-content {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Distributes space evenly */
-    max-width: 800px;
+    justify-content: space-between;
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 20px 10px;
+    flex-wrap: wrap;
 }
 
-/* Left Section (Profile Image) */
 .left-section {
-    width: 150px; /* Fixed width to match image size */
+    flex: 1 1 120px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
 }
 
 .profile-image {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid var(--accent-color);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s;
 }
 
 .profile-image:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
 }
 
-/* Center Section (Header Text) */
 .center-section {
-    flex-grow: 1; /* Allows the center section to take up remaining space */
-    text-align: center; /* Centers the text horizontally */
+    flex: 2 1 300px;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 .header-text h1 {
-    font-size: 2.5em;
+    font-size: 2em;
     margin: 0;
-    color: var(--text-color);
 }
 
 .header-text p {
+    margin: 5px 0 0;
     font-size: 1.2em;
-    margin: 5px 0 0 0;
     color: var(--secondary-text-color);
 }
 
-/* Right Section (Empty for Balancing) */
 .right-section {
-    width: 150px; /* Matches left-section to balance the layout */
+    flex: 1 1 120px;
+    /* Placeholder for potential future content */
 }
 
-/* Main Sections */
-.projects-section, .experience-section {
-    max-width: 800px;
+/* Section Styling */
+.section {
+    max-width: 1000px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
-.projects-section h2, .experience-section h2 {
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 10px;
-    font-size: 2em;
-    font-weight: 300;
-    color: var(--text-color); /* Changed from primary color to maintain consistency */
+.section h2 {
+    font-family: var(--font-secondary);
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    border-bottom: 2px solid var(--accent-color);
+    display: inline-block;
 }
 
-#project-list, #experience-list {
+/* List Styling for All Sections */
+.section ul {
     list-style: none;
     padding: 0;
-    margin-top: 20px;
+    margin: 0;
 }
 
-#project-list li, #experience-list li {
+/* Skills Section */
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.skills-list li {
+    background: var(--modal-background);
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 1em;
+    color: var(--text-color);
+    transition: background 0.3s, transform 0.3s, color 0.3s;
+}
+
+.skills-list li:hover {
+    background: var(--accent-color);
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* Projects Section */
+.projects-list, .experience-list, .education-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.projects-list li, 
+.experience-list li, 
+.education-list li {
     background: var(--modal-background);
     padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background 0.3s, transform 0.3s, color 0.3s;
 }
 
-#project-list li:hover, #experience-list li:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+.projects-list li:hover, 
+.experience-list li:hover, 
+.education-list li:hover {
+    background: var(--accent-color);
+    color: var(--primary-color);
+    transform: translateY(-3px);
 }
 
-#project-list li h3, #experience-list li h3 {
-    margin: 0;
+.projects-list li h3, 
+.experience-list li h3, 
+.education-list li h3 {
+    font-family: var(--font-secondary);
+    margin-top: 0;
     font-size: 1.4em;
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: var(--text-color); /* Changed from primary color to maintain consistency */
+    color: var(--accent-color);
 }
 
-#project-list li p, #experience-list li p {
-    margin: 0;
+.projects-list li p, 
+.experience-list li p, 
+.education-list li p {
+    margin: 10px 0 0;
+    color: var(--text-color);
+    font-size: 1em;
+}
+
+.projects-list li p strong, 
+.experience-list li p strong {
     color: var(--secondary-text-color);
 }
 
-/* Fade-In Sections */
-.section {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+.education-list li h3 {
+    color: var(--accent-color);
 }
 
-.section.visible {
-    opacity: 1;
-    transform: translateY(0);
+.education-list li p {
+    color: var(--text-color);
+    font-size: 1em;
 }
 
-/* Smooth Scrolling */
-html {
-    scroll-behavior: smooth;
+.education-list li p em {
+    color: var(--secondary-text-color);
+    font-style: italic;
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
-    .header-content {
-        flex-direction: column; /* Stacks sections vertically on smaller screens */
-    }
-    
-    .left-section, .right-section {
-        width: auto; /* Allows flexibility */
-        margin-bottom: 15px; /* Space between image and text */
-    }
-    
-    .profile-image {
-        width: 120px;
-        height: 120px;
-    }
-    
-    .header-text h1 {
-        font-size: 2em;
-    }
-    
-    .header-text p {
-        font-size: 1em;
-    }
+/* Specific Styling Overrides (if needed) */
+/* For example, Projects might have different color on hover */
+.projects-list li:hover h3, 
+.experience-list li:hover h3, 
+.education-list li:hover h3 {
+    color: var(--primary-color);
+}
 
-    
-    /* Optional: Adjust main content padding or margins if needed */
-    main {
-        padding-bottom: 20px; /* Increased padding if footer was previously removed */
-    }
+.projects-list li:hover p, 
+.experience-list li:hover p, 
+.education-list li:hover p {
+    color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin: 40px 0;
+    font-size: 0.9em;
+    color: var(--secondary-text-color);
+}
+
+footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }

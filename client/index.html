@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
-    <title>MalcolmMcD.com</title>
-    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malcolm McDonald</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -15,49 +15,85 @@
             <div class="center-section">
                 <div class="header-text">
                     <h1>Malcolm McDonald</h1>
-                    <p>Full Stack Developer | San Francisco, CA</p>
+                    <p>Developer | San Francisco, CA</p>
                 </div>
             </div>
-            <div class="right-section">
-                <!-- This empty div balances the layout -->
-            </div>
+            <div class="right-section"></div>
         </div>
     </header>
-    
+
     <main>
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section section">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>JavaScript, HTML, CSS, Python</li>
+                <li>API Development and Integration</li>
+                <li>Express.js, Node.js</li>
+                <li>Postman, Coolify, Hetzner Cloud</li>
+                <li>Blockchain, Web3, Smart Contracts (Learning)</li>
+            </ul>
+        </section>
+
+        <!-- Projects Section -->
         <section id="projects" class="projects-section section">
             <h2>Projects</h2>
-            <ul id="project-list">
+            <ul class="projects-list">
                 <li>
-                    <h3>Project One</h3>
-                    <p>A brief description of Project One.</p>
+                    <h3>QuoteFinder</h3>
+                    <p>Developed a web app to extract quotes from PDFs using OpenAI API, featuring a responsive full-stack solution deployed on Hetzner Cloud.</p>
+                    <p><strong>Technologies:</strong> JavaScript, Node.js, Express.js, PostgreSQL, OpenAI API, Hetzner Cloud, Coolify</p>
                 </li>
                 <li>
-                    <h3>Project Two</h3>
-                    <p>A brief description of Project Two.</p>
+                    <h3>Defifa.net Art Panels</h3>
+                    <p>Engineered a p5.js sketch for rendering dynamic scorecards, integrating on-chain and JSON data with interactive features.</p>
+                    <p><strong>Technologies:</strong> JavaScript, HTML, CSS, p5.js, JSON</p>
                 </li>
-                <!-- Add more projects as needed -->
+                <li>
+                    <h3>Mars-Game</h3>
+                    <p>Developed a 2D platformer game with team collaboration, focusing on gameplay mechanics, AI, and level progression.</p>
+                    <p><strong>Technologies:</strong> JavaScript, HTML, CSS</p>
+                </li>
             </ul>
         </section>
-        
+
+        <!-- Experience Section -->
         <section id="experience" class="experience-section section">
             <h2>Experience</h2>
-            <ul id="experience-list">
+            <ul class="experience-list">
                 <li>
-                    <h3>Software Engineer at Company A</h3>
-                    <p>Worked on developing scalable web applications.</p>
+                    <h3>Developer | QuoteFinder</h3>
+                    <p>Designed and implemented a full-stack application with OpenAI API integration and scalable backend services.</p>
                 </li>
                 <li>
-                    <h3>Frontend Developer at Company B</h3>
-                    <p>Focused on creating responsive user interfaces.</p>
+                    <h3>Panel Developer | Defifa.net</h3>
+                    <p>Created dynamic and interactive art panels using p5.js for a blockchain-based project.</p>
                 </li>
-                <!-- Add more experiences as needed -->
+                <li>
+                    <h3>Developer | Mars-Game</h3>
+                    <p>Collaborated in a team to design game mechanics and implement gameplay features in a 2D platformer.</p>
+                </li>
             </ul>
         </section>
-        
-        <!-- Contact section removed -->
+
+        <!-- Education Section -->
+        <section id="education" class="education-section section">
+            <h2>Education</h2>
+            <ul class="education-list">
+                <li>
+                    <h3>Bachelor of Science in Computer Science</h3>
+                    <p>University of Oregon | Eugene, OR | Sep 2024 - Present</p>
+                </li>
+                <!-- Add more education entries as needed -->
+            </ul>
+        </section>
     </main>
-    
+
+    <footer>
+        <p>Contact: <a href="mailto:Malcolm.e.McDonald@gmail.com">Malcolm.e.McDonald@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/MalcolmMc23" target="_blank">MalcolmMc23</a> | LinkedIn: <a href="https://linkedin.com/in/malcolm-mcd" target="_blank">malcolm-mcd</a></p>
+    </footer>
+
     <script src="main.js"></script>
 </body>
 </html>
