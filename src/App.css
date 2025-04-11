@@ -36,3 +36,99 @@
     transform: rotate(360deg);
   }
 }
+
+.projects-list {
+    list-style: none;
+    padding: 0;
+    display: grid; /* Or flex, depending on desired layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Example grid layout */
+    gap: 20px;
+}
+
+.project-item {
+    background-color: #f9f9f9; /* Light background for the item */
+    border: 1px solid #eee;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Remove padding from li if link handles it */
+    padding: 0; 
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.project-link {
+    display: block; /* Make the link fill the list item */
+    padding: 20px; /* Add padding inside the link */
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+    height: 100%; /* Ensure link fills the height */
+    box-sizing: border-box; /* Include padding in height/width */
+}
+
+.project-link h3 {
+    margin-top: 0;
+    color: #333; /* Or your preferred heading color */
+}
+
+.project-link p {
+    margin-bottom: 10px;
+    color: #555; /* Or your preferred text color */
+}
+
+.project-link p:last-child {
+    margin-bottom: 0;
+}
+
+.experience-list {
+    list-style: none;
+    padding: 0;
+    /* You might want a different layout for experiences, e.g., single column */
+    display: flex; 
+    flex-direction: column; 
+    gap: 20px;
+}
+
+.experience-item {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 0; /* Remove padding from li if link handles it */
+}
+
+.experience-item:not(.no-link):hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for items that are links */
+.experience-link {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.experience-link h3, .experience-item.no-link h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.experience-link p, .experience-item.no-link p {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.experience-link p:last-child, .experience-item.no-link p:last-child {
+    margin-bottom: 0;
+}
+
+/* Add padding back for items that are not links */
+.experience-item.no-link {
+    padding: 20px;
+}
