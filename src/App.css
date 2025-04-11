@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  --accent-color: #007bff; /* Define accent color */
 }
 
 .App-logo {
@@ -37,98 +38,103 @@
   }
 }
 
-.projects-list {
+/* Remove old project list styles if no longer needed or adapt */
+/* .projects-list { ... } */
+
+/* Remove old project item styles */
+/* .project-item { ... } */
+/* .project-item:hover { ... } */
+/* .project-link { ... } */
+/* .project-link h3 { ... } */
+/* .project-link p { ... } */
+
+/* Remove old experience list styles if no longer needed or adapt */
+/* .experience-list { ... } */
+
+/* Remove old experience item styles */
+/* .experience-item { ... } */
+/* .experience-item:not(.no-link):hover { ... } */
+/* .experience-link { ... } */
+/* .experience-link h3, .experience-item.no-link h3 { ... } */
+/* .experience-link p, .experience-item.no-link p { ... } */
+/* .experience-item.no-link { ... } */
+
+/* Unified Card Styles */
+.card {
+    background-color: #ffffff; /* White background */
+    border: 1px solid #e0e0e0; /* Slightly softer border */
+    border-radius: 10px; /* More rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    overflow: hidden; /* Ensure content respects border radius */
+    display: flex; /* Use flexbox for internal layout */
+    flex-direction: column; /* Stack content vertically */
+}
+
+.card:not(.no-link) {
+  cursor: pointer; /* Indicate clickable cards */
+}
+
+.card:not(.no-link):hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12); /* Slightly stronger shadow */
+    border-color: var(--accent-color); /* Accent border on hover */
+}
+
+.card-link {
+    display: block; /* Make the link fill the card */
+    text-decoration: none;
+    color: inherit;
+    padding: 25px; /* Increased padding */
+    flex-grow: 1; /* Allow link to take available space */
+}
+
+/* Styles for cards without links */
+.card.no-link {
+    padding: 25px; /* Add padding directly */
+}
+
+.card-title {
+    margin-top: 0;
+    margin-bottom: 15px; /* More space below title */
+    color: var(--accent-color); /* Use accent color */
+    font-size: 1.25em; /* Slightly larger title */
+}
+
+.card-description {
+    margin-bottom: 15px;
+    color: #444; /* Slightly darker text */
+    line-height: 1.6; /* Improve readability */
+}
+
+.card-details {
+    margin-top: auto; /* Push details to the bottom if card grows */
+    margin-bottom: 0;
+    color: #666; /* Lighter color for details */
+    font-size: 0.9em;
+}
+
+.card-details strong {
+  color: #333; /* Slightly darker label */
+}
+
+/* Adjust list styles if needed */
+.projects-list, .experience-list {
     list-style: none;
     padding: 0;
-    display: grid; /* Or flex, depending on desired layout */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Example grid layout */
-    gap: 20px;
-}
-
-.project-item {
-    background-color: #f9f9f9; /* Light background for the item */
-    border: 1px solid #eee;
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Remove padding from li if link handles it */
-    padding: 0; 
-}
-
-.project-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.project-link {
-    display: block; /* Make the link fill the list item */
-    padding: 20px; /* Add padding inside the link */
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Inherit text color */
-    height: 100%; /* Ensure link fills the height */
-    box-sizing: border-box; /* Include padding in height/width */
-}
-
-.project-link h3 {
-    margin-top: 0;
-    color: #333; /* Or your preferred heading color */
-}
-
-.project-link p {
-    margin-bottom: 10px;
-    color: #555; /* Or your preferred text color */
-}
-
-.project-link p:last-child {
-    margin-bottom: 0;
+    display: grid; /* Using grid for projects */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px; /* Increased gap */
 }
 
 .experience-list {
-    list-style: none;
-    padding: 0;
-    /* You might want a different layout for experiences, e.g., single column */
-    display: flex; 
-    flex-direction: column; 
-    gap: 20px;
+    display: flex; /* Using flex for experience (single column) */
+    flex-direction: column;
 }
 
-.experience-item {
-    background-color: #f9f9f9;
-    border: 1px solid #eee;
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    padding: 0; /* Remove padding from li if link handles it */
-}
-
-.experience-item:not(.no-link):hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* Styles for items that are links */
-.experience-link {
-    display: block;
-    padding: 20px;
-    text-decoration: none;
-    color: inherit;
-    height: 100%;
-    box-sizing: border-box;
-}
-
-.experience-link h3, .experience-item.no-link h3 {
-    margin-top: 0;
-    color: #333;
-}
-
-.experience-link p, .experience-item.no-link p {
-    margin-bottom: 10px;
-    color: #555;
-}
-
-.experience-link p:last-child, .experience-item.no-link p:last-child {
-    margin-bottom: 0;
-}
-
-/* Add padding back for items that are not links */
-.experience-item.no-link {
-    padding: 20px;
+/* Keep section heading styles */
+.section h2 {
+  padding-bottom: 10px; /* Space below the heading */
+  margin-bottom: 30px; /* Space below the divider */
+  border-bottom: 2px solid var(--accent-color); /* Accent color divider */
+  display: inline-block; /* Ensure border only spans the text width */
 }

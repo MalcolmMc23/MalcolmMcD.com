@@ -1,0 +1,30 @@
+import React from 'react';
+import '../App.css'; // Ensure this path is correct
+
+function Card({ title, description, details, linkUrl }) {
+    const content = (
+        <>
+            <h3 className="card-title">{title}</h3>
+            <p className="card-description">{description}</p>
+            {details && <p className="card-details"><strong>Technologies:</strong> {details}</p>}
+        </>
+    );
+
+    if (linkUrl) {
+        return (
+            <li className="card">
+                <a href={linkUrl} target="_blank" rel="noopener noreferrer" className="card-link">
+                    {content}
+                </a>
+            </li>
+        );
+    } else {
+        return (
+            <li className="card no-link">
+                {content}
+            </li>
+        );
+    }
+}
+
+export default Card; 
