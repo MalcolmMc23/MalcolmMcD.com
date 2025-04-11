@@ -12,30 +12,39 @@ function App() {
   const sectionsRef = useRef([]);
 
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
+    // 1) Make a local copy of the array so ESLint doesn’t complain
+    const sections = sectionsRef.current;
 
-    sectionsRef.current.forEach(section => {
-      if (section) { // Check if the ref is not null
+    // 2) Create the intersection observer
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target); // stop observing once visible
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    // 3) Observe each section in our local copy
+    sections.forEach((section) => {
+      if (section) {
         observer.observe(section);
       }
     });
 
-    // Cleanup observer on component unmount
+    // 4) Cleanup: unobserve every section in the local copy
     return () => {
-      sectionsRef.current.forEach(section => {
+      sections.forEach((section) => {
         if (section) {
           observer.unobserve(section);
         }
       });
     };
-  }, []); // Empty dependency array ensures this runs only once on mount
+    // No dependencies => runs only once on mount/unmount
+  }, []);
 
   // Helper function to add section refs
   const addSectionRef = (el) => {
