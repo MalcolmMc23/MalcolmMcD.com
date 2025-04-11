@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from './Card'; // Import the new Card component
+import Card from '../Card'; // Updated path
 
 function ProjectItem({ title, description, technologies, githubUrl, imageUrl }) {
     return (

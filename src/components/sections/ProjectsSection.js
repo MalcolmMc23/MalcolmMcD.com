@@ -1,6 +1,6 @@
 import React from 'react';
+import ProjectItem from '../items/ProjectItem'; // Updated path
 import './Section.css'; // Import section styles
-import ProjectItem from './ProjectItem'; // Import the new component
 
 const projects = [
     {

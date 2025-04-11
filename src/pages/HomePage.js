@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
-import SkillsSection from '../components/SkillsSection';
-import ProjectsSection from '../components/ProjectsSection';
-import ExperienceSection from '../components/ExperienceSection';
-import EducationSection from '../components/EducationSection';
+import SkillsSection from '../components/sections/SkillsSection';
+import ProjectsSection from '../components/sections/ProjectsSection';
+import ExperienceSection from '../components/sections/ExperienceSection';
+import EducationSection from '../components/sections/EducationSection';
 
 function HomePage() {
     // Intersection Observer Logic for fade-in effect

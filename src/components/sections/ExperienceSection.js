@@ -1,6 +1,6 @@
 import React from 'react';
+import ExperienceItem from '../items/ExperienceItem'; // Updated path
 import './Section.css'; // Import section styles
-import ExperienceItem from './ExperienceItem'; // Import the new component
 
 // Define experience data
 const experiences = [
