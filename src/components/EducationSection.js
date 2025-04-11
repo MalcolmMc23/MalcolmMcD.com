@@ -1,5 +1,5 @@
 import React from 'react';
-import '../App.css'; // Adjust path as needed
+import './Section.css'; // Import section styles
 
 function EducationSection({ addSectionRef }) {
     return (

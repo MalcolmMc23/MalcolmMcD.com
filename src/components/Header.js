@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import '../App.css'; // Adjust path as needed if styles are moved
+import './Header.css'; // Import component-specific CSS
 
 function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

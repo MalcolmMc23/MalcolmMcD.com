@@ -1,0 +1,21 @@
+/* Section List Styles */
+.projects-list, .experience-list {
+    list-style: none;
+    padding: 0;
+    display: grid; /* Using grid for projects */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px; /* Increased gap */
+}
+
+.experience-list {
+    display: flex; /* Using flex for experience (single column) */
+    flex-direction: column;
+}
+
+/* Section Heading Styles */
+.section h2 {
+  padding-bottom: 10px; /* Space below the heading */
+  margin-bottom: 30px; /* Space below the divider */
+  border-bottom: 2px solid var(--accent-color); /* Accent color divider */
+  display: inline-block; /* Ensure border only spans the text width */
+} 

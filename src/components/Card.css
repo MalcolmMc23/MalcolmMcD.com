@@ -1,0 +1,57 @@
+/* Unified Card Styles */
+.card {
+    background-color: #ffffff; /* White background */
+    border: 1px solid #e0e0e0; /* Slightly softer border */
+    border-radius: 10px; /* More rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    overflow: hidden; /* Ensure content respects border radius */
+    display: flex; /* Use flexbox for internal layout */
+    flex-direction: column; /* Stack content vertically */
+}
+
+.card:not(.no-link) {
+  cursor: pointer; /* Indicate clickable cards */
+}
+
+.card:not(.no-link):hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12); /* Slightly stronger shadow */
+    border-color: var(--accent-color); /* Accent border on hover */
+}
+
+.card-link {
+    display: block; /* Make the link fill the card */
+    text-decoration: none;
+    color: inherit;
+    padding: 25px; /* Increased padding */
+    flex-grow: 1; /* Allow link to take available space */
+}
+
+/* Styles for cards without links */
+.card.no-link {
+    padding: 25px; /* Add padding directly */
+}
+
+.card-title {
+    margin-top: 0;
+    margin-bottom: 15px; /* More space below title */
+    color: var(--accent-color); /* Use accent color */
+    font-size: 1.25em; /* Slightly larger title */
+}
+
+.card-description {
+    margin-bottom: 15px;
+    color: #444; /* Slightly darker text */
+    line-height: 1.6; /* Improve readability */
+}
+
+.card-details {
+    margin-top: auto; /* Push details to the bottom if card grows */
+    margin-bottom: 0;
+    color: #666; /* Lighter color for details */
+    font-size: 0.9em;
+}
+
+.card-details strong {
+  color: #333; /* Slightly darker label */
+} 
