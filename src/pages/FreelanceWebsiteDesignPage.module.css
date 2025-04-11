@@ -1,0 +1,129 @@
+/* src/pages/FreelanceWebsiteDesignPage.module.css */
+.pageContainer {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.header {
+  margin-bottom: 2rem;
+  /* Override global header styles */
+  background: none; /* Remove background */
+  padding: 0; /* Remove padding */
+  box-shadow: none; /* Remove shadow */
+}
+
+.mainTitle {
+  font-size: 2.8rem; /* Larger title */
+  color: var(--text-color, #212529);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.subTitle {
+  font-size: 1.1rem;
+  color: var(--secondary-text-color, #6c757d);
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* 2/3 for image, 1/3 for card */
+  gap: 2rem;
+  align-items: start; /* Align items to the top */
+}
+
+.imageContainer img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block; /* Remove extra space below image */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contentGrid {
+    grid-template-columns: 1fr; /* Stack image and card on smaller screens */
+  }
+  .mainTitle {
+    font-size: 2.2rem;
+  }
+}
+
+.heroImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px; /* Optional: adds rounded corners */
+}
+
+/* Why Choose Us Section Styles */
+.whyChooseSection {
+  padding: 40px 20px;
+  background-color: var(--background-color); /* Use main background color */
+}
+
+.whyChooseGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 40px; /* Space between text and image */
+  align-items: center;
+  max-width: 1100px; /* Limit width */
+  margin: 0 auto; /* Center the grid */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .whyChooseGrid {
+    grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    gap: 30px;
+  }
+  .whyChooseImageContainer {
+    order: -1; /* Move image above text on mobile */
+  }
+}
+
+.whyChooseText {
+  /* No specific styles needed unless further customization */
+}
+
+.whyChooseHeading {
+  font-size: 2.5rem; /* Match heading style */
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.whyChooseParagraph {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  margin-bottom: 30px;
+}
+
+.whyChooseButton {
+  background-color: #77B651; /* Green color from image */
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.whyChooseButton:hover {
+  background-color: #639a44; /* Darker green on hover */
+}
+
+.whyChooseImageContainer {
+  /* Container styles */
+}
+
+.whyChooseImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px; /* Rounded corners for the image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+} 

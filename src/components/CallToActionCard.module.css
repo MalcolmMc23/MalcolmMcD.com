@@ -1,0 +1,57 @@
+/* src/components/CallToActionCard.module.css */
+.card {
+  padding: 0; /* Remove padding if not needed without card background */
+  /* background-color: var(--primary-color, #ffffff); */ /* Removed */
+  /* border-radius: 8px; */ /* Removed */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Spacing between elements */
+  /* box-shadow: 0 4px 8px var(--shadow-color, rgba(0, 0, 0, 0.05)); */ /* Removed */
+  /* height: 100%; */ /* May not be needed anymore */
+  justify-content: center; /* Center content vertically if needed */
+}
+
+.title {
+  font-size: 1.75rem; /* Adjust size as needed */
+  color: var(--text-color, #212529);
+  font-weight: 600; /* Bold title */
+  margin: 0;
+}
+
+.description {
+  font-size: 1rem;
+  color: var(--text-color, #212529);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  border: 1px solid transparent; /* Base border */
+}
+
+.primaryButton {
+  background-color: var(--accent-color, #007bff); /* Using accent color */
+  color: var(--primary-color, #ffffff); /* White text on accent */
+}
+
+.primaryButton:hover {
+  background-color: #0056b3; /* Darker blue on hover - match colors.md */
+}
+
+.secondaryButton {
+  background-color: transparent; /* Make background transparent */
+  color: var(--text-color, #212529); /* Main text color */
+  border: 2px solid var(--text-color, #212529); /* Border using text color, slightly thicker */
+}
+
+.secondaryButton:hover {
+  background-color: var(--background-color, #f8f9fa); /* Light gray background on hover */
+  border-color: var(--text-color, #212529);
+} 
