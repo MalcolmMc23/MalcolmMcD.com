@@ -49,6 +49,7 @@ function Header() {
                             <div className="dropdown-content">
                                 <NavLink to="/services/freelance-website-design" className="dropdown-item" onClick={() => setIsMobileMenuOpen(false)}>Freelance Website Design</NavLink>
                                 {/* Add other service links here, ensure they also close the menu */}
+                                <NavLink to="/services/mobile-app-development" className="dropdown-item" onClick={() => setIsMobileMenuOpen(false)}>Mobile App Development</NavLink>
                             </div>
                         </div>
                         <NavLink to="/contact" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'} onClick={() => setIsMobileMenuOpen(false)}>Contact</NavLink>

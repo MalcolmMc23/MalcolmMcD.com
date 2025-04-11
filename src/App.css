@@ -186,7 +186,7 @@
 }
 
 .dropdown-content {
-    display: none; /* Hide dropdown by default */
+    /* display: none; Removed, using max-height and visibility */
     position: absolute;
     background-color: #f9f9f9; /* Light background */
     min-width: 200px; /* Adjust width as needed */
@@ -197,16 +197,19 @@
     padding: 8px 0; /* Padding for the container */
     opacity: 0;
     visibility: hidden;
-    transform: translateY(10px); /* Start slightly lower */
-    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out, transform 0.2s ease-in-out;
+    transform: translateY(0); /* Adjust transform if needed, maybe start slightly higher? */
+    max-height: 0; /* Start with zero height */
+    overflow: hidden; /* Hide content that overflows during animation */
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, max-height 0.3s ease-in-out, transform 0.3s ease-in-out; /* Increased duration and added max-height */
 }
 
 .dropdown:hover .dropdown-content,
 .dropdown:focus-within .dropdown-content { /* Show on hover or when focusing within */
-    display: block; /* Show dropdown on hover/focus */
+    /* display: block; Removed, handled by visibility and max-height */
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
+    transform: translateY(0); /* Ensure it's at final position */
+    max-height: 500px; /* Set a max-height large enough to contain the items */
 }
 
 .dropdown-item {
