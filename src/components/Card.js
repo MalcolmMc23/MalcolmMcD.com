@@ -1,12 +1,15 @@
 import React from 'react';
 import '../App.css'; // Ensure this path is correct
 
-function Card({ title, description, details, linkUrl }) {
+function Card({ title, description, details, linkUrl, imageUrl }) {
     const content = (
         <>
-            <h3 className="card-title">{title}</h3>
-            <p className="card-description">{description}</p>
-            {details && <p className="card-details"><strong>Technologies:</strong> {details}</p>}
+            {imageUrl && <img src={imageUrl} alt={title} className="card-image" />}
+            <div className="card-content">
+                <h3 className="card-title">{title}</h3>
+                <p className="card-description">{description}</p>
+                {details && <p className="card-details"><strong>Technologies:</strong> {details}</p>}
+            </div>
         </>
     );
 

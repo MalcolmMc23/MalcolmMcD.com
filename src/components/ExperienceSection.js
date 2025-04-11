@@ -5,12 +5,19 @@ import ExperienceItem from './ExperienceItem'; // Import the new component
 // Define experience data
 const experiences = [
     {
-        title: "Panel Developer - Defifa.net Art Panels",
-        description: "Created dynamic anxd interactive art panels using p5.js for Defifa.net, a blockchain-based project.",
-        technologies: "p5.js, JavaScript",
-        githubUrl: "https://github.com/MalcolmMc23/p5JS_ArtPanels" // Add GitHub URL here
+        title: "Full Stack Developer",
+        description: "Developed and deployed full stack applications using JavaScript, React, Node.js, and SQL databases. Led projects from concept to deployment, focusing on clean code and performance.",
+        technologies: "JavaScript, React, Node.js, SQL, Docker, CI/CD",
+        githubUrl: "https://github.com/MalcolmMc23/quotefinder.xyz", // Example link, update as needed
+        imageUrl: "/path/to/your/placeholder-experience.png" // Placeholder image URL
+    },
+    {
+        title: "React Native Developer",
+        description: "Contributed to the development of mobile applications using React Native and TypeScript, ensuring cross-platform compatibility and smooth user experience.",
+        technologies: "React Native, TypeScript, Expo, AsyncStorage",
+        githubUrl: "https://github.com/MalcolmMc23/BeaverHacks", // Example link, update as needed
+        imageUrl: "/path/to/your/placeholder-experience-2.png" // Placeholder image URL
     }
-    // Add more experience objects here if needed
 ];
 
 function ExperienceSection({ addSectionRef }) {
@@ -24,7 +31,8 @@ function ExperienceSection({ addSectionRef }) {
                         title={exp.title}
                         description={exp.description}
                         technologies={exp.technologies}
-                        githubUrl={exp.githubUrl} // Pass the URL
+                        githubUrl={exp.githubUrl}
+                        imageUrl={exp.imageUrl} // Pass imageUrl
                     />
                 ))}
             </ul>
