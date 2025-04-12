@@ -1,5 +1,9 @@
 /* src/pages/FreelanceWebsiteDesignPage.module.css */
 .pageContainer {
+  /* Page-specific variable overrides */
+  --accent-color: #2E8B57; /* SeaGreen */
+  --accent-color-hover: #256d45; /* Darker SeaGreen */
+
   max-width: 1200px;
   margin: 2rem auto;
   padding: 0 1rem;
@@ -101,7 +105,7 @@
 }
 
 .whyChooseButton {
-  background-color: var(--accent-color); /* Use accent color from theme */
+  background-color: var(--accent-color); /* Use page-specific accent color */
   color: white; /* Keep text white for contrast */
   padding: 12px 25px;
   border: none;
@@ -113,7 +117,7 @@
 }
 
 .whyChooseButton:hover {
-  background-color: #0056b3; /* Use darker blue for hover, matching footer link hover */
+  background-color: var(--accent-color-hover); /* Use page-specific hover color */
 }
 
 /* Remove default link styles from the button wrapper */

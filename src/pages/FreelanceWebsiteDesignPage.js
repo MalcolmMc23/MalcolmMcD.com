@@ -2,6 +2,7 @@ import React from 'react';
 import CallToActionCard from '../components/CallToActionCard'; // Adjust path if needed
 import TestimonialSection from '../components/TestimonialSection'; // Import the new section
 import FeatureListSection from '../components/sections/FeatureListSection'; // Import the feature list section
+import FadeInSection from '../components/animations/FadeInSection'; // Import the animation component
 import styles from './FreelanceWebsiteDesignPage.module.css';
 
 // Assuming you have an image file in your public folder or assets
@@ -40,28 +41,34 @@ function FreelanceWebsiteDesignPage() {
             </section>
 
             {/* Why Choose Us Section */}
-            <section className={styles.whyChooseSection}>
-                <div className={styles.whyChooseGrid}>
-                    <div className={styles.whyChooseText}>
-                        <h2 className={styles.whyChooseHeading}>Why Partner With Me?</h2>
-                        <p className={styles.whyChooseParagraph}>
-                            I build modern, responsive websites tailored to your specific needs. With a focus on clean code, intuitive user experience (UX), and clear communication, I partner with you to bring your digital vision to life effectively and efficiently. Let's create a website that not only looks great but also achieves your goals.
-                        </p>
-                        <a href="/contact" className={styles.whyChooseButtonLink}>
-                            <button className={styles.whyChooseButton}>Get a Free Estimate</button>
-                        </a>
+            <FadeInSection>
+                <section className={styles.whyChooseSection}>
+                    <div className={styles.whyChooseGrid}>
+                        <div className={styles.whyChooseText}>
+                            <h2 className={styles.whyChooseHeading}>Why Partner With Me?</h2>
+                            <p className={styles.whyChooseParagraph}>
+                                I build modern, responsive websites tailored to your specific needs. With a focus on clean code, intuitive user experience (UX), and clear communication, I partner with you to bring your digital vision to life effectively and efficiently. Let's create a website that not only looks great but also achieves your goals.
+                            </p>
+                            <a href="/contact" className={styles.whyChooseButtonLink}>
+                                <button className={styles.whyChooseButton}>Get a Free Estimate</button>
+                            </a>
+                        </div>
+                        <div className={styles.whyChooseImageContainer}>
+                            <img src={whyChooseImageUrl} alt="Landscaping materials and design elements" className={styles.whyChooseImage} />
+                        </div>
                     </div>
-                    <div className={styles.whyChooseImageContainer}>
-                        <img src={whyChooseImageUrl} alt="Landscaping materials and design elements" className={styles.whyChooseImage} />
-                    </div>
-                </div>
-            </section>
+                </section>
+            </FadeInSection>
 
             {/* Feature List Section */}
-            <FeatureListSection />
+            <FadeInSection>
+                <FeatureListSection />
+            </FadeInSection>
 
             {/* Testimonial Section */}
-            <TestimonialSection />
+            <FadeInSection>
+                <TestimonialSection />
+            </FadeInSection>
 
         </main>
     );
