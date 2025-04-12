@@ -53,7 +53,7 @@
     z-index: 10; /* Ensure it appears above other content */
     border-radius: 5px; /* Slightly rounded corners */
     margin-top: 2px; /* Small gap between button and dropdown */
-    padding: 8px 0; /* Padding for the container */
+    padding: 0; /* Remove container padding */
     opacity: 0;
     visibility: hidden;
     transform: translateY(0); /* Adjust transform if needed, maybe start slightly higher? */

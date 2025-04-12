@@ -9,9 +9,9 @@ const whyChooseImageUrl = '/landscaping/landscape-material-uses.jpg'; // Image f
 
 function FreelanceWebsiteDesignPage() {
     // Text content for the first card
-    const cardTitle = "Get a Free Estimate";
-    const cardDescription = "Specializing in Residential and Commercial custom landscaping and maintenance including irrigation services, fences and decks, walls, patios and walkways.";
-    const primaryButtonText = "Free Estimate";
+    const cardTitle = "Ready for a New Website?";
+    const cardDescription = "I design and develop custom, responsive websites focused on user experience and achieving your business objectives. Get in touch for a free consultation!";
+    const primaryButtonText = "Get a Quote";
     const secondaryButtonText = "541.912.5869";
     const secondaryButtonLink = "tel:5419125869"; // Make the phone number clickable
 
@@ -41,11 +41,13 @@ function FreelanceWebsiteDesignPage() {
             <section className={styles.whyChooseSection}>
                 <div className={styles.whyChooseGrid}>
                     <div className={styles.whyChooseText}>
-                        <h2 className={styles.whyChooseHeading}>Why Choose EO Landscaping?</h2>
+                        <h2 className={styles.whyChooseHeading}>Why Partner With Me?</h2>
                         <p className={styles.whyChooseParagraph}>
-                            EO Landscaping brings over 20 years of expertise to custom landscaping and maintenance across Eugene, Springfield, and nearby areas. Founded by Eric Osborn, our family-owned team of 12 offers full-service landscaping, including irrigation, fencing, patios, and more. Whether it's routine lawn care of a complete outdoor transformation, we deliver high-quality work at competitive prices. With a focus on exceptional service, we're here to make your vision a reality--contact us today for a free estimate.
+                            I build modern, responsive websites tailored to your specific needs. With a focus on clean code, intuitive user experience (UX), and clear communication, I partner with you to bring your digital vision to life effectively and efficiently. Let's create a website that not only looks great but also achieves your goals.
                         </p>
-                        <button className={styles.whyChooseButton}>Get a Free Estimate</button>
+                        <a href="/contact" className={styles.whyChooseButtonLink}>
+                            <button className={styles.whyChooseButton}>Get a Free Estimate</button>
+                        </a>
                     </div>
                     <div className={styles.whyChooseImageContainer}>
                         <img src={whyChooseImageUrl} alt="Landscaping materials and design elements" className={styles.whyChooseImage} />

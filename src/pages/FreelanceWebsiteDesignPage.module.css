@@ -101,8 +101,8 @@
 }
 
 .whyChooseButton {
-  background-color: #77B651; /* Green color from image */
-  color: white;
+  background-color: var(--accent-color); /* Use accent color from theme */
+  color: white; /* Keep text white for contrast */
   padding: 12px 25px;
   border: none;
   border-radius: 5px;
@@ -113,7 +113,13 @@
 }
 
 .whyChooseButton:hover {
-  background-color: #639a44; /* Darker green on hover */
+  background-color: #0056b3; /* Use darker blue for hover, matching footer link hover */
+}
+
+/* Remove default link styles from the button wrapper */
+.whyChooseButtonLink {
+  text-decoration: none;
+  display: inline-block; /* Ensure it behaves like the button */
 }
 
 .whyChooseImageContainer {
