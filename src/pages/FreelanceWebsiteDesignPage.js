@@ -1,5 +1,7 @@
 import React from 'react';
 import CallToActionCard from '../components/CallToActionCard'; // Adjust path if needed
+import TestimonialSection from '../components/TestimonialSection'; // Import the new section
+import FeatureListSection from '../components/sections/FeatureListSection'; // Import the feature list section
 import styles from './FreelanceWebsiteDesignPage.module.css';
 
 // Assuming you have an image file in your public folder or assets
@@ -54,6 +56,12 @@ function FreelanceWebsiteDesignPage() {
                     </div>
                 </div>
             </section>
+
+            {/* Feature List Section */}
+            <FeatureListSection />
+
+            {/* Testimonial Section */}
+            <TestimonialSection />
 
         </main>
     );

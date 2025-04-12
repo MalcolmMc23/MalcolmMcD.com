@@ -1,0 +1,50 @@
+/* src/components/items/FeatureItem.module.css */
+
+.featureItem {
+  display: flex;
+  align-items: flex-start; /* Align items to the top */
+  gap: 1rem; /* Space between icon and text */
+  text-align: left; /* Align text to the left */
+  max-width: 350px; /* Constrain width */
+}
+
+.iconContainer {
+  flex-shrink: 0; /* Prevent icon from shrinking */
+  /* You might need to adjust size/padding based on the actual icons */
+}
+
+.iconPlaceholder {
+  width: 40px; /* Example size */
+  height: 40px; /* Example size */
+  background-color: var(--accent-color, #007bff); /* Use accent color from colors.md */
+  border-radius: 50%; /* Make it circular, adjust as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-color, #ffffff); /* Icon color */
+  /* Add some temporary visual indication */
+  border: 2px solid var(--accent-color, #007bff);
+}
+
+.icon {
+  /* Specific icon styles might go here if needed */
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 1.5rem; /* Example size */
+  font-weight: bold;
+  margin: 0 0 0.5rem 0; /* Remove default margins, add bottom margin */
+  color: var(--text-color, #212529); /* Use text color from colors.md */
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--secondary-text-color, #6c757d); /* Use secondary text color */
+  margin: 0;
+} 

@@ -1,0 +1,23 @@
+/* src/components/sections/FeatureListSection.module.css */
+
+.featureListSection {
+  padding: 4rem 2rem; /* Add padding around the section */
+  background-color: var(--background-color, #f8f9fa); /* Use background color from colors.md */
+}
+
+.featureListContainer {
+  display: flex;
+  justify-content: space-around; /* Distribute items evenly */
+  align-items: flex-start; /* Align items to the top */
+  /* flex-wrap: wrap; Removed to prevent wrapping */
+  gap: 2rem; /* Add space between items */
+  max-width: 1200px; /* Optional: constrain the max width */
+  margin: 0 auto; /* Center the container */
+}
+
+/* Responsive adjustments for padding */
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+  .featureListSection {
+    padding: 3rem 1rem;
+  }
+} 
