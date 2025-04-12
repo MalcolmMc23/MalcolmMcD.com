@@ -10,24 +10,14 @@
 
 .iconContainer {
   flex-shrink: 0; /* Prevent icon from shrinking */
-  /* You might need to adjust size/padding based on the actual icons */
+  /* Adjust padding/margin if needed to visually align icon */
+  padding-top: 0.25rem; /* Small adjustment for visual alignment with text */
 }
 
-.iconPlaceholder {
-  width: 40px; /* Example size */
-  height: 40px; /* Example size */
-  background-color: var(--accent-color, #007bff); /* Use accent color from colors.md */
-  border-radius: 50%; /* Make it circular, adjust as needed */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--primary-color, #ffffff); /* Icon color */
-  /* Add some temporary visual indication */
-  border: 2px solid var(--accent-color, #007bff);
-}
-
+/* Styles for the actual icon */
 .icon {
-  /* Specific icon styles might go here if needed */
+  font-size: 2.5rem; /* Adjust size as needed */
+  color: var(--accent-color, #007bff); /* Use accent color (will be green on the page) */
 }
 
 .textContainer {
