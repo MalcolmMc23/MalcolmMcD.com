@@ -1,0 +1,49 @@
+/* Assuming :root variables from colors.md are defined globally */
+
+.contactContainer {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 2rem auto; /* Added top/bottom margin */
+    background-color: var(--background-color, #f8f9fa); /* Use main background */
+}
+
+.contactMethods {
+    margin-top: 2rem;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.contactMethod {
+    border: 1px solid var(--border-color, #dee2e6); /* Use border color */
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: var(--primary-color, #ffffff); /* Use primary (white) background */
+    box-shadow: 0 2px 4px var(--shadow-color, rgba(0, 0, 0, 0.05)); /* Add subtle shadow */
+    transition: box-shadow 0.2s ease-in-out; /* Smooth transition on hover */
+}
+
+.contactMethod:hover {
+    box-shadow: 0 4px 8px var(--shadow-color, rgba(0, 0, 0, 0.08)); /* Slightly stronger shadow on hover */
+}
+
+.contactMethod h2 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: var(--text-color, #212529); /* Use main text color */
+}
+
+/* Apply main text color to paragraphs within the card */
+.contactMethod p {
+    color: var(--text-color, #212529);
+    margin-bottom: 0; /* Adjust spacing as needed */
+}
+
+.contactMethod p a {
+    color: var(--accent-color, #007bff); /* Keep accent color (blue) for links */
+    text-decoration: none;
+    font-weight: 500; /* Slightly bolder links */
+}
+
+.contactMethod p a:hover {
+    text-decoration: underline;
+} 
