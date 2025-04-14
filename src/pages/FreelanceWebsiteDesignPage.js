@@ -21,7 +21,7 @@ function FreelanceWebsiteDesignPage() {
     return (
         <main className={styles.pageContainer}>
             <header className={styles.header}>
-                <h1 className={styles.mainTitle}>Landscaping & Lawn Care Services</h1>
+                <h1 className={styles.mainTitle}>Freelance Website Design Services</h1>
                 <p className={styles.subTitle}>Serving Eugene, Marion, Benton, Lane County, and beyond!</p>
             </header>
 

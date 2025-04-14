@@ -19,7 +19,7 @@ const featuresData = [
     {
         icon: PiChartLineUp, // Icon for Growth/Results
         title: "Focused on Your Growth",
-        description: "Built with SEO best practices and clear calls-to-action to help you attract more leads and grow your landscaping business online."
+        description: "Built with SEO best practices and clear calls-to-action to help you attract more leads and grow your web design business online."
     }
 ];
 
