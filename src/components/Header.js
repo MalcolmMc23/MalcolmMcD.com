@@ -38,7 +38,7 @@ function Header() {
                         <div className="nav-item dropdown">
                             {/* The NavLink for Services needs careful handling if it's also a trigger */}
                             <NavLink
-                                to="/services"
+                                to="/services/freelance-website-design"
                                 className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}
                                 // Keep mobile menu open when clicking the main Services link if needed, or close it
                                 // onClick={() => setIsMobileMenuOpen(false)} // Example: Close menu on click
