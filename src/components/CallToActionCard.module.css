@@ -37,12 +37,15 @@
 }
 
 .primaryButton {
-  background-color: var(--accent-color, #007bff); /* Using accent color */
+  background-color: var(--accent-color, #28a745); /* Using accent color (updated to green) */
   color: var(--primary-color, #ffffff); /* White text on accent */
+  border: 1px solid var(--accent-color, #28a745); /* Add border to match hover state */
 }
 
 .primaryButton:hover {
-  background-color: #0056b3; /* Darker blue on hover - match colors.md */
+  background-color: white; /* White background on hover */
+  color: var(--accent-color, #28a745); /* Green text on hover */
+  border: 2px solid var(--accent-color, #28a745); /* Green outline on hover - increased width */
 }
 
 .secondaryButton {

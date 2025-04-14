@@ -15,8 +15,8 @@ function FreelanceWebsiteDesignPage() {
     const cardTitle = "Ready for a New Website?";
     const cardDescription = "I design and develop custom, responsive websites focused on user experience and achieving your business objectives. Get in touch for a free consultation!";
     const primaryButtonText = "Get a Quote";
-    const secondaryButtonText = "541.912.5869";
-    const secondaryButtonLink = "tel:5419125869"; // Make the phone number clickable
+    const secondaryButtonText = "+1 (650) 484 9829";
+    const secondaryButtonLink = "tel:+16504849829"; // Make the phone number clickable
 
     return (
         <main className={styles.pageContainer}>
