@@ -33,6 +33,23 @@
     display: inline-block; /* Keep it inline with other nav items */
 }
 
+/* Freelance page specific styling */
+.nav-item.dropdown.freelance-page > .nav-link {
+    color: #2E8B57; /* SeaGreen - matching the freelance page accent color */
+}
+
+.nav-item.dropdown.freelance-page > .nav-link:hover {
+    color: #256d45; /* Darker SeaGreen - matching the freelance page hover color */
+}
+
+.nav-item.dropdown.freelance-page > .nav-link.active {
+    border-bottom-color: #2E8B57; /* SeaGreen border for active state */
+}
+
+.nav-item.dropdown.freelance-page .dropdown-content {
+    border-top: 2px solid #2E8B57; /* SeaGreen top border for dropdown */
+}
+
 /* Style the main Services link within the dropdown */
 .dropdown > .nav-link::after { /* Target pseudo-element */
     /* Inherits base nav-link styles, add specific overrides if needed */
@@ -83,6 +100,11 @@
 .dropdown-item:hover {
     background-color: var(--border-color); /* Use theme variable */
     color: var(--accent-color); /* Change text to accent blue on hover */
+}
+
+.nav-item.dropdown.freelance-page .dropdown-item:hover {
+    background-color: rgba(46, 139, 87, 0.1); /* Light SeaGreen background */
+    color: #2E8B57; /* SeaGreen text on hover */
 }
 
 /* Ensure right-section aligns items if needed (adjust based on header layout) */
@@ -247,6 +269,11 @@
      .dropdown-item:hover {
         background-color: var(--border-color); /* Use theme variable for consistency */
         color: var(--accent-color);
+    }
+    
+    .nav-item.dropdown.freelance-page .dropdown-item:hover {
+        background-color: rgba(46, 139, 87, 0.1); /* Light SeaGreen background */
+        color: #2E8B57; /* SeaGreen text on hover */
     }
 
     .right-section {

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import './Header.css'; // Import component-specific CSS
 
 function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const location = useLocation(); // Get current location
+    const isFreelancePage = location.pathname === '/services/freelance-website-design';
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -35,7 +37,7 @@ function Header() {
                         {/* Close button for mobile */}
                         <button className="close-menu" onClick={toggleMobileMenu} aria-label="Close menu">&times;</button>
                         <NavLink to="/" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'} onClick={() => setIsMobileMenuOpen(false)}>Home</NavLink>
-                        <div className="nav-item dropdown">
+                        <div className={`nav-item dropdown ${isFreelancePage ? 'freelance-page' : ''}`}>
                             {/* The NavLink for Services needs careful handling if it's also a trigger */}
                             <NavLink
                                 to="/services/freelance-website-design"
