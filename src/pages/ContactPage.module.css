@@ -1,49 +1,130 @@
-/* Assuming :root variables from colors.md are defined globally */
+/* Apple-inspired styles for the Contact Page */
 
 .contactContainer {
-    padding: 2rem;
-    max-width: 800px;
-    margin: 2rem auto; /* Added top/bottom margin */
-    background-color: var(--background-color, #f8f9fa); /* Use main background */
+    padding: 3rem 1rem; /* Adjusted padding */
+    max-width: 700px; /* Standard width */
+    margin: 3rem auto;
+    background-color: #ffffff; /* Clean white background */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; /* System font stack */
+    color: #1d1d1f; /* Apple's primary text color */
+}
+
+.contactContainer h1 {
+    font-size: 2.2rem; /* Slightly smaller heading */
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #1d1d1f;
+}
+
+.contactContainer p:first-of-type { /* Target the introductory paragraph */
+    text-align: center;
+    font-size: 1.1rem;
+    color: #6e6e73; /* Apple's secondary text color */
+    margin-bottom: 2.5rem; /* Adjusted spacing */
+    max-width: 580px; /* Limit width for readability */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Style for the new intro text */
+.introText {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #6e6e73; /* Apple's secondary text color */
+    margin-top: 0.5rem; /* Space below h1 */
+    margin-bottom: 3.5rem; /* Increased space above the form */
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
 }
 
 .contactMethods {
-    margin-top: 2rem;
-    display: grid;
-    gap: 1.5rem;
+    /* Removed grid styles */
+    margin-top: 0; /* Remove top margin as it's handled by intro p */
+    text-align: center; /* Center the single method */
+    margin-bottom: 3rem; /* Add space before the divider */
 }
 
 .contactMethod {
-    border: 1px solid var(--border-color, #dee2e6); /* Use border color */
-    padding: 1.5rem;
-    border-radius: 8px;
-    background-color: var(--primary-color, #ffffff); /* Use primary (white) background */
-    box-shadow: 0 2px 4px var(--shadow-color, rgba(0, 0, 0, 0.05)); /* Add subtle shadow */
-    transition: box-shadow 0.2s ease-in-out; /* Smooth transition on hover */
-}
-
-.contactMethod:hover {
-    box-shadow: 0 4px 8px var(--shadow-color, rgba(0, 0, 0, 0.08)); /* Slightly stronger shadow on hover */
+    /* Removed border, background, shadow */
+    /* Removed padding as it's less necessary without a container */
+    text-align: center;
+    margin-bottom: 0; /* Reset margin as parent handles spacing */
 }
 
 .contactMethod h2 {
+    font-size: 1.1rem; /* Slightly smaller */
+    font-weight: 600;
     margin-top: 0;
-    margin-bottom: 0.5rem;
-    color: var(--text-color, #212529); /* Use main text color */
+    margin-bottom: 0.4rem;
+    color: #1d1d1f;
 }
 
-/* Apply main text color to paragraphs within the card */
 .contactMethod p {
-    color: var(--text-color, #212529);
-    margin-bottom: 0; /* Adjust spacing as needed */
+    color: #6e6e73; /* Secondary text color */
+    margin-bottom: 0;
+    font-size: 1rem;
 }
 
 .contactMethod p a {
-    color: var(--accent-color, #007bff); /* Keep accent color (blue) for links */
+    color: #007aff; /* Apple's blue link color */
     text-decoration: none;
-    font-weight: 500; /* Slightly bolder links */
+    font-weight: 400; /* Regular weight for links */
 }
 
 .contactMethod p a:hover {
     text-decoration: underline;
-} 
+}
+
+/* Divider Style */
+.divider {
+    border: none;
+    height: 1px;
+    background-color: #d2d2d7; /* Light gray separator */
+    margin: 3rem auto; /* Center and add vertical space */
+    max-width: 100px; /* Make it short */
+}
+
+/* Styles specifically for the ContactForm might need adjustment */
+/* Assuming ContactForm has its own styles or needs global ones */
+/* For example, making form inputs look more Apple-like: */
+
+/*
+input[type="text"],
+input[type="email"],
+textarea {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  padding: 12px 15px;
+  border: 1px solid #d2d2d7;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #f5f5f7; // Light grey background for inputs
+}
+
+textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+button[type="submit"] {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background-color: #007aff;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #005ecb; // Darker blue on hover
+}
+*/ 

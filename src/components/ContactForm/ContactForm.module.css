@@ -28,18 +28,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 3rem 1rem; /* Adjusted padding */
+    padding: 1rem 1rem; /* Reduced padding */
     /* background-color: #f9fafb; /* Optional: light gray background for the section */
 }
 
 .contactForm {
     width: 100%;
     max-width: 32rem; /* max-w-lg */
-    border-radius: 1rem; /* rounded-2xl */
-    border: 1px solid #e5e7eb; /* border-gray-200 */
-    background-color: #ffffff; /* bg-white */
-    padding: 2rem; /* p-8 */
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-lg */
+    /* Removed container styles: border, background, shadow */
+    /* border-radius: 1rem;  rounded-2xl  */
+    /* border: 1px solid #e5e7eb;  border-gray-200  */
+    /* background-color: #ffffff;  bg-white  */
+    padding: 0; /* Removed padding */
+    /* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);  shadow-lg  */
     /* Consider adding backdrop-filter if needed and supported */
 }
 
