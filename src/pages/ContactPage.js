@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './ContactPage.module.css'; // Assuming you might want some styling
+import ContactForm from '../components/ContactForm/ContactForm';
 
 function ContactPage() {
     return (
@@ -29,7 +30,8 @@ function ContactPage() {
                  */}
             </section>
 
-            {/* You could also add a contact form component here later */}
+            {/* Add the Netlify contact form */}
+            <ContactForm />
         </main>
     );
 }

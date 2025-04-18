@@ -1,0 +1,153 @@
+.successContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 1rem;
+    text-align: center;
+}
+
+.successIcon {
+    margin-bottom: 1rem;
+    color: #10B981; /* Emerald 500 */
+}
+
+.successHeading {
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: 600;   /* font-semibold */
+    margin-bottom: 0.5rem; /* Add some space below heading */
+}
+
+.successText {
+    margin-top: 0.5rem; /* mt-2 */
+    max-width: 28rem;  /* max-w-md */
+    color: #4B5563;   /* text-gray-600 */
+}
+
+.formSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem; /* Adjusted padding */
+    /* background-color: #f9fafb; /* Optional: light gray background for the section */
+}
+
+.contactForm {
+    width: 100%;
+    max-width: 32rem; /* max-w-lg */
+    border-radius: 1rem; /* rounded-2xl */
+    border: 1px solid #e5e7eb; /* border-gray-200 */
+    background-color: #ffffff; /* bg-white */
+    padding: 2rem; /* p-8 */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-lg */
+    /* Consider adding backdrop-filter if needed and supported */
+}
+
+.hiddenField {
+    display: none;
+}
+
+.formGroup {
+    margin-bottom: 1.5rem; /* mb-6 */
+}
+
+.formGroupMessage {
+    margin-bottom: 2rem; /* mb-8 */
+}
+
+
+.formLabel {
+    display: block;
+    margin-bottom: 0.5rem; /* mb-2 */
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 500;   /* font-medium */
+    color: #374151;   /* text-gray-700 */
+}
+
+.formInput,
+.formTextarea {
+    width: 100%;
+    border-radius: 0.75rem; /* rounded-xl */
+    border: 1px solid #D1D5DB; /* border-gray-300 */
+    background-color: #f9fafb; /* bg-gray-50 - slight contrast */
+    padding: 0.75rem 1rem; /* Adjusted padding */
+    font-size: 1rem;
+    color: #1f2937; /* text-gray-800 */
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.formInput::placeholder,
+.formTextarea::placeholder {
+    color: #9ca3af; /* text-gray-400 */
+}
+
+
+.formInput:focus,
+.formTextarea:focus {
+    outline: none;
+    border-color: #3B82F6; /* focus:border-blue-500 */
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.5); /* focus:ring-4 focus:ring-blue-200 equivalent */
+}
+
+.formTextarea {
+    min-height: 100px; /* Ensure textarea has a decent minimum height */
+    resize: vertical; /* Allow vertical resize */
+}
+
+.submitButton {
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.75rem; /* rounded-xl */
+    background-color: #2563EB; /* bg-blue-600 */
+    padding: 0.75rem 1.5rem; /* px-6 py-3 */
+    font-weight: 600; /* font-semibold */
+    font-size: 1rem;
+    color: white; /* text-white */
+    transition: background-color 0.2s ease-in-out;
+    border: none;
+    cursor: pointer;
+}
+
+.submitButton:hover {
+    background-color: #1D4ED8; /* hover:bg-blue-700 */
+}
+
+.submitButton:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.7); /* focus:ring-4 focus:ring-blue-400 */
+}
+
+/* Basic dark mode example (add more specific styles if needed) */
+/* You might need a global mechanism to toggle dark mode */
+/* @media (prefers-color-scheme: dark) {
+    .contactForm {
+        border-color: #4b5563; // dark:border-gray-700/60
+        background-color: rgba(17, 24, 39, 0.8); // dark:bg-gray-900/60 approximation
+    }
+
+    .formLabel {
+        color: #d1d5db; // dark text color
+    }
+
+    .formInput, .formTextarea {
+        background-color: rgba(55, 65, 81, 0.8); // dark:bg-gray-800/80
+        border-color: #4b5563; // dark:border-gray-600
+        color: #f3f4f6; // dark text
+    }
+
+     .formInput:focus,
+    .formTextarea:focus {
+        border-color: #60A5FA; // dark:focus:ring-blue-600 border part
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.6); // dark:focus:ring-blue-600 ring part
+    }
+
+    .submitButton {
+        background-color: #3B82F6; // dark:bg-blue-500
+    }
+
+    .submitButton:hover {
+        background-color: #2563EB; // dark:hover:bg-blue-600
+    }
+} */ 
